@@ -1,4 +1,4 @@
-name: Publish Package 
+name: Publish Package  
 
 on:
   push:
@@ -14,9 +14,7 @@ jobs:
         with:
           node-version: 12
       - name: Install Dependencies
-        run: |
-          npm init
-          npm install
+        run: npm install
 
       - name: Publish Package
         run: npm publish
