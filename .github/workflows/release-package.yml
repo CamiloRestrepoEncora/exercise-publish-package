@@ -14,11 +14,9 @@ jobs:
         with:
           node-version: 12
       - name: Install Dependencies
-        working-directory: ./sample_packages/npm/
         run: npm install
 
       - name: Publish Package
-        working-directory: ./sample_packages/npm/
         run: npm publish
         env:
           NODE_AUTH_TOKEN: ${{secrets.GITHUB_TOKEN}}
